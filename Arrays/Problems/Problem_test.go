@@ -120,3 +120,23 @@ func TestAP(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestLargestContigiousSum(t *testing.T) {
+	var TestArr [][]int = [][]int{{1, 2, 3, 4, 5}, {1, 1, 1}, {4, -6, 2, 5}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+
+		fmt.Println("Max ones: ", LargestContiguousSum(&v))
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestPascalTriangle(t *testing.T) {
+	var TestArr []int = []int{1, 2, 3, 4, 5, 6, 7, 8}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+
+		fmt.Println("Max ones: ", PascalTriangle(v))
+		fmt.Println("------------------------------------------------------------")
+	}
+}
