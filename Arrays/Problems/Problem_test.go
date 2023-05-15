@@ -140,3 +140,35 @@ func TestPascalTriangle(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestRowCloumnTest(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 1, 0}, {1, 1, 1}, {1, 1, 1}}, {{1, 1, 1}, {1, 1, 0}, {1, 1, 1}}, {{1, 0}, {1, 0}, {1, 0}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ")
+		for _, c := range v {
+			fmt.Println(c)
+		}
+		RowColumnZero(&v)
+		fmt.Println("Result: ")
+		for _, c := range v {
+			fmt.Println(c)
+		}
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestRotateMatrix(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, {{1, 2}, {3, 4}, {5, 6}}, {{1, 0}, {1, 0}, {1, 0}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ")
+		for _, c := range v {
+			fmt.Println(c)
+		}
+		B := RotateMatrix(&v)
+		fmt.Println("Result: ")
+		for _, c := range B {
+			fmt.Println(c)
+		}
+		fmt.Println("------------------------------------------------------------")
+	}
+}
