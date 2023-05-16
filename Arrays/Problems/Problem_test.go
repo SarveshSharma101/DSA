@@ -172,3 +172,36 @@ func TestRotateMatrix(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestPrimeUptoN(t *testing.T) {
+	var TestArr []int = []int{5, 1, 12}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+
+		fmt.Println("Result: ", PrimesuptoN(v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestMergeOverlappingIntervals(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2}, {2, 3}, {1, 4}, {5, 6}}, {{1, 1}, {2, 2}, {3, 3}}, {{1, 4}, {6, 7}, {4, 5}}, {{1, 2}, {2, 3}, {5, 5}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+
+		fmt.Println("Result: ", MergeOverlappingIntervals(v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestKthLargestElement(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{4, 3, 2, 1}, {2}}, {{1, 2, 3, 4, 5}, {5}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+
+		fmt.Println("Result: ", KthLargestElement(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
