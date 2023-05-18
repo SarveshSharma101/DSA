@@ -205,3 +205,24 @@ func TestKthLargestElement(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestNextGreaterPermutation(t *testing.T) {
+	var TestArr [][]int = [][]int{{1, 3, 2}, {3, 2, 1}, {2, 2, 9}, {2, 9, 9}, {4}, {1, 2, 3, 4}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		NextGreaterPermutation(&v)
+		fmt.Println("Result: ", v)
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestInversionCount(t *testing.T) {
+	var TestArr [][]int = [][]int{{8, 4, 1, 2}, {1, 2, 2, 3}, {3, 2, 1}, {10, 1, 2, 3, 4}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", InversionCount(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
