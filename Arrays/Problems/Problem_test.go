@@ -226,3 +226,53 @@ func TestInversionCount(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestContainsElement(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3, 3, 3, 4, 4, 5}, {2}}, {{1, 2, 3, 3, 3, 4, 4, 5}, {6}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", ContainsElement(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestSearchRange(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3, 3, 3, 4, 4, 5}, {3}}, {{1, 2, 3, 3, 3, 4, 4, 5}, {6}}, {{1, 2, 3, 3, 3, 4, 4, 5}, {5}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", SearchRange(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestCountNegative(t *testing.T) {
+	var TestArr [][]int = [][]int{{-5, -3, -2, 3, 4, 6, 7, 8}, {0, 1, 2, 3, 4, 6, 7, 8}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", NegativeNumbersInSortedArray(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestNextGreaterNumber(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3, 3, 4, 4, 8, 10}, {4}}, {{1, 2, 3, 3, 3, 4, 4, 5}, {5}}, {{1, 2, 3, 3, 3, 4, 4, 5}, {-1}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", NextGreaterElementInSortedArray(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestInsertinSortedArray(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3, 4, 5}, {3}}, {{1, 2, 3, 5}, {4}}, {{1, 2, 3, 4, 5}, {-1}}, {{1, 2, 3, 4, 5}, {6}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", InsertPositioninSortedArray(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
