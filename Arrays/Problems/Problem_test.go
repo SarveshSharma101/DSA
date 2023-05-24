@@ -276,3 +276,23 @@ func TestInsertinSortedArray(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestIsPerfectSquare(t *testing.T) {
+	var TestArr []int = []int{25, 20, 36, 144, 155, 225}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", IsPerfectSquare(v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestSearchInRotatedArray(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{4, 5, 6, 7, 1, 2, 3}, {6}}, {{4, 5, 6, 7, 0, 1, 2}, {7}}, {{3, 4, 1, 2}, {4}}, {{5, 1, 2, 3, 4}, {5}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", SearchRotatedSortedArray(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
