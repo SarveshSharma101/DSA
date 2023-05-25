@@ -296,3 +296,23 @@ func TestSearchInRotatedArray(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestNonRepeatingElement(t *testing.T) {
+	var TestArr [][]int = [][]int{{1, 1, 2, 3, 3, 4, 4}, {1, 2, 2}, {3, 3, 4, 4, 5}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", NonRepeatingElement(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestSquareRoot(t *testing.T) {
+	var TestArr []int = []int{25, 20, 36, 144, 155, 225}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", SquareRoot(v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
