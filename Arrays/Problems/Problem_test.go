@@ -316,3 +316,24 @@ func TestSquareRoot(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestMatrixSearch(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}}}
+	keys := []int{6, 15}
+	for i, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", MatrixSearch(&v, keys[i]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestMatricMedian(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 6, 7, 7, 8}, {2, 2, 3, 3, 4}, {1, 2, 2, 2, 2}}, {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, {{1, 2, 3}, {3, 3, 4}, {1, 1, 2}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", MedianofRowwiseSortedMatrix(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
