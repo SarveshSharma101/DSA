@@ -337,3 +337,54 @@ func TestMatricMedian(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestRemoveOccurence(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 4, 2, 6, 2, 6, 9, 4}, {4}}, {{1, 1, 1, 2, 2}, {1}}, {{1, 3, 3, 3, 4, 4}, {3}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", RemoveOccurences(&v[0], v[1][0]))
+		fmt.Println("--->", v[0])
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestTwoSumSorted(t *testing.T) {
+	var TestArr [][]int = [][]int{{-3, 1, 3, 4}, {-2, 1, 3, 4}, {3, 3, 4, 4, 5}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", TwoSumSorted(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestMergeTwoSrotedArray(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3, 4, 4}, {2, 4, 5, 5}}, {{1, 1, 1, 2, 2}, {1}}, {{1, 3, 3, 3, 4, 4}, {3}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", TwoSortedArrays(&v[0], &v[1]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestKthSum(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{3, 5, 6, 2, 4, 7, 8}, {3}}, {{1, 3, 3, 3, 4, 4}, {1}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", KSubarraySum(&v[0], v[1][0]))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestUniqueElementInSortedArray(t *testing.T) {
+	var TestArr [][]int = [][]int{{1, 2, 3, 3, 3, 4, 5, 5}, {1, 1, 1, 2, 2}, {3, 3, 4, 4, 5}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", UniqueElementsinSortedArray(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
