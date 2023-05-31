@@ -388,3 +388,24 @@ func TestUniqueElementInSortedArray(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func Test3Sum(t *testing.T) {
+	var TestArr [][]int = [][]int{{1, 1, 0, -1, -2}, {-1, 0, 1, 2}, {1, -1, 9, -8, 0}, {9, 8, 7, 6, 5, 5, 4, 3, 2, 1}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", ThreeSum(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestKthDiff(t *testing.T) {
+	var TestArr []int = []int{1, 3, 5, 7, 10}
+	var kArr []int = []int{2, 3, 1}
+	for _, v := range kArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", Kdiffpairs(&TestArr, v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
