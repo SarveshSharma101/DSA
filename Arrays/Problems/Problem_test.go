@@ -409,3 +409,24 @@ func TestKthDiff(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestKElement(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 2, 3, 4}, {2, 3, 4, 5}}, {{1, 1, 2, 3}, {3, 3, 4, 5, 6}}}
+	var k []int = []int{3, 5}
+	for i, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		C := Kthelementoftwosortedlists(&v[0], &v[1], k[i])
+		fmt.Println("Sorted array: ", C)
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestSortedArrayIntersection(t *testing.T) {
+	var TestArr [][][]int = [][][]int{{{1, 3, 4, 5, 5, 6, 6, 7}, {2, 5, 6, 6, 7, 8}}, {{1, 1, 2, 3}, {3, 3, 4, 5, 6}}, {{1, 1, 3, 3}, {3, 3, 4, 5, 6}}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		C := SortedArraysIntersection(&v[0], &v[1])
+		fmt.Println("Sorted array: ", C)
+		fmt.Println("------------------------------------------------------------")
+	}
+}
