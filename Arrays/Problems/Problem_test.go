@@ -430,3 +430,23 @@ func TestSortedArrayIntersection(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestDutchFlag(t *testing.T) {
+	var TestArr [][]int = [][]int{{2, 2, 0, 1}, {1, 0, 1, 2, 2}, {1, 0, 0, 0}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", DutchNationalFlag(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestTrappingWater(t *testing.T) {
+	var TestArr [][]int = [][]int{{1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}, {1, 0, 0, 1, 0}, {1, 0, 2, 0, 0, 1}, {3, 0, 2, 0, 4}}
+	for _, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		fmt.Println("Result: ", TrappingRainWater(&v))
+
+		fmt.Println("------------------------------------------------------------")
+	}
+}
