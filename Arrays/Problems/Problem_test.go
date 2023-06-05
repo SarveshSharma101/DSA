@@ -461,3 +461,25 @@ func TestKMaxSum(t *testing.T) {
 		fmt.Println("------------------------------------------------------------")
 	}
 }
+
+func TestKSubStringVowel(t *testing.T) {
+	var TestArr []string = []string{"workattech", "substring"}
+	var k []int = []int{3, 2}
+	for i, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		C := kSubstringVowels(v, k[i])
+		fmt.Println("Sorted array: ", C)
+		fmt.Println("------------------------------------------------------------")
+	}
+}
+
+func TestKSubStringVowelMax(t *testing.T) {
+	var TestArr []string = []string{"workaattech", "substring"}
+	var k []int = []int{3, 2}
+	for i, v := range TestArr {
+		fmt.Println("Test case: ", v)
+		C := kSubstringVowelsMax(v, k[i])
+		fmt.Println("Sorted array: ", C)
+		fmt.Println("------------------------------------------------------------")
+	}
+}
