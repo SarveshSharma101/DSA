@@ -124,3 +124,42 @@ func TestReverseLL(test *testing.T) {
 
 	PrintLinkedList(&head)
 }
+
+func TestRemoveOccurenceFromLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+	Add(&head, 2)
+	Add(&head, 2)
+	Add(&head, 2)
+	Add(&head, 3)
+	Add(&head, 4)
+	Add(&head, 2)
+	Add(&head, 5)
+	Add(&head, 2)
+	Add(&head, 6)
+
+	head = RemoveoccurrencesinLinkedList(&head, 2)
+
+	PrintLinkedList(&head)
+}
+
+func TestPrintMiddleElement(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+
+	Add(&head, 3)
+	Add(&head, 4)
+	Add(&head, 2)
+	Add(&head, 5)
+	Add(&head, 2)
+	Add(&head, 6)
+
+	MiddleElementofLinkedList(&head)
+
+}
