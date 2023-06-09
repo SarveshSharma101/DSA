@@ -163,3 +163,38 @@ func TestPrintMiddleElement(test *testing.T) {
 	MiddleElementofLinkedList(&head)
 
 }
+
+func TestMerge2SortedLL(test *testing.T) {
+	var head LL = LL{
+		Data: 2,
+	}
+
+	Add(&head, 3)
+
+	Add(&head, 7)
+	var head2 LL = LL{
+		Data: 1,
+	}
+	Add(&head2, 4)
+	Add(&head2, 7)
+
+	h := MergeTwoSortedLinkedList(&head, &head2)
+
+	PrintLinkedList(&h)
+
+}
+
+func TestLLPallindrome(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+
+	Add(&head, 2)
+	Add(&head, 1)
+	Add(&head, 1)
+
+	fmt.Println(LinkedListPalindrome(&head))
+
+}
