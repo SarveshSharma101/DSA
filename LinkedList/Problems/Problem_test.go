@@ -198,3 +198,63 @@ func TestLLPallindrome(test *testing.T) {
 	fmt.Println(LinkedListPalindrome(&head))
 
 }
+
+func TestFindINtersection(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+
+	Add(&head, 2)
+	Add(&head, 1)
+	Add(&head, 1)
+
+	var head2 LL = LL{
+		Data: 0,
+	}
+
+	Add(&head2, 0)
+
+	Add(&head2, 3)
+	Add(&head2, 4)
+	Add(&head2, 5)
+	fmt.Println(FindIntersectionOfLL(&head, &head2))
+
+}
+
+func TestRemoveDuplicateNodes(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+
+	Add(&head, 2)
+	Add(&head, 1)
+	Add(&head, 1)
+	Add(&head, 3)
+	Add(&head, 3)
+	Add(&head, 1)
+
+	DeleteDuplicateNodes(&head)
+	PrintLinkedList(&head)
+}
+
+func TestRemoveDuplicateNodes2(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 1)
+
+	Add(&head, 2)
+	Add(&head, 1)
+	Add(&head, 1)
+	Add(&head, 3)
+	Add(&head, 3)
+	Add(&head, 1)
+
+	head = DeleteDuplicateNodes2(&head)
+	PrintLinkedList(&head)
+}
