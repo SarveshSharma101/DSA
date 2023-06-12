@@ -258,3 +258,39 @@ func TestRemoveDuplicateNodes2(test *testing.T) {
 	head = DeleteDuplicateNodes2(&head)
 	PrintLinkedList(&head)
 }
+
+func TestXthLastElementofLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+
+	Add(&head, 3)
+	Add(&head, 4)
+	Add(&head, 5)
+	Add(&head, 6)
+	Add(&head, 7)
+	Add(&head, 8)
+
+	x := FindxthNodefromEndofLinkedList(&head, 2)
+	fmt.Println("Xth element: ", x)
+}
+
+func TestDeleteXthLastElementofLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+
+	Add(&head, 3)
+	Add(&head, 4)
+	Add(&head, 5)
+	Add(&head, 6)
+	Add(&head, 7)
+	Add(&head, 8)
+
+	head = DeleteNodeXthEndofLinkedList(&head, 4)
+	PrintLinkedList(&head)
+}
