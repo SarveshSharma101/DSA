@@ -294,3 +294,36 @@ func TestDeleteXthLastElementofLL(test *testing.T) {
 	head = DeleteNodeXthEndofLinkedList(&head, 4)
 	PrintLinkedList(&head)
 }
+
+func TestAddTwiNumberLL(test *testing.T) {
+	var head1 LL = LL{
+		Data: 2,
+	}
+
+	Add(&head1, 3)
+
+	Add(&head1, 1)
+	var head2 LL = LL{
+		Data: 1,
+	}
+
+	Add(&head2, 4)
+
+	Add(&head2, 5)
+	Res := AddTwoNumbersasLists(&head1, &head2)
+	PrintLinkedList(&Res)
+}
+
+func TestReverseLLII(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 5)
+
+	Add(&head, 7)
+	Add(&head, 13)
+
+	head = ReverseaLinkedListII(&head, 2, 3)
+	PrintLinkedList(&head)
+}
