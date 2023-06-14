@@ -327,3 +327,21 @@ func TestReverseLLII(test *testing.T) {
 	head = ReverseaLinkedListII(&head, 2, 3)
 	PrintLinkedList(&head)
 }
+
+func TestReverseLLGrp(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+	Add(&head, 3)
+	Add(&head, 4)
+	Add(&head, 5)
+	Add(&head, 6)
+	Add(&head, 7)
+	Add(&head, 8)
+	// Add(&head, 9)
+
+	head = ReverseaLinkedListinkgroups(&head, 3)
+	PrintLinkedList(&head)
+}
