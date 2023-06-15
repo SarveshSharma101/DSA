@@ -345,3 +345,34 @@ func TestReverseLLGrp(test *testing.T) {
 	head = ReverseaLinkedListinkgroups(&head, 3)
 	PrintLinkedList(&head)
 }
+
+func TestAddOneToLL(test *testing.T) {
+	var head LL = LL{
+		Data: 9,
+	}
+
+	Add(&head, 9)
+	Add(&head, 9)
+	Add(&head, 9)
+
+	head1 := AddOnetoLinkedList(&head)
+	PrintLinkedList(&head1)
+}
+
+func TestReorderLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+	Add(&head, 3)
+	Add(&head, 4)
+	Add(&head, 5)
+	Add(&head, 6)
+	Add(&head, 7)
+	Add(&head, 8)
+	// Add(&head, 9)
+
+	head1 := ReorderList(&head)
+	PrintLinkedList(&head1)
+}
