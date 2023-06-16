@@ -376,3 +376,16 @@ func TestReorderLL(test *testing.T) {
 	head1 := ReorderList(&head)
 	PrintLinkedList(&head1)
 }
+
+func TestRoatetLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+	Add(&head, 3)
+	Add(&head, 4)
+
+	head1 := RotateALinkedList(&head, 2)
+	PrintLinkedList(&head1)
+}
