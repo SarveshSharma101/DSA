@@ -389,3 +389,57 @@ func TestRoatetLL(test *testing.T) {
 	head1 := RotateALinkedList(&head, 2)
 	PrintLinkedList(&head1)
 }
+
+func TestDetectLoopInLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+	Add(&head, 3)
+	Add(&head, 4)
+	temp := &head
+	for temp.Next != nil {
+		temp = temp.Next
+	}
+	temp.Next = head.Next
+
+	x := DetectinLinkedList(&head)
+	fmt.Println(x)
+}
+
+func TestRemoveLoopInLL(test *testing.T) {
+	var head LL = LL{
+		Data: 1,
+	}
+
+	Add(&head, 2)
+	Add(&head, 3)
+	Add(&head, 4)
+	temp := &head
+	for temp.Next != nil {
+		temp = temp.Next
+	}
+	temp.Next = head.Next
+	RemoveLoopFromLinkedList(&head)
+	PrintLinkedList(&head)
+}
+
+func TestFlattenMultiLL(test *testing.T) {
+	var head LLD = LLD{
+		Data: 1,
+	}
+
+	AddDown(&head, 3)
+	AddDown(&head, 8)
+
+	node := AddNext(&head, 5)
+	AddDown(node, 8)
+
+	node = AddNext(&head, 8)
+	AddDown(node, 14)
+	AddDown(node, 26)
+
+	node1 := FlattenaMultiLevelLinkedList(&head)
+	PrintLinkedList(&node1)
+}
