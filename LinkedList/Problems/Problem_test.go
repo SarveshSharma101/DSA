@@ -443,3 +443,24 @@ func TestFlattenMultiLL(test *testing.T) {
 	node1 := FlattenaMultiLevelLinkedList(&head)
 	PrintLinkedList(&node1)
 }
+
+func TestPartitionLL(test *testing.T) {
+
+	head := LL{
+		Data: 1,
+	}
+	Add(&head, 6)
+	Add(&head, 2)
+	Add(&head, 4)
+	Add(&head, 3)
+	Add(&head, 5)
+	Add(&head, 2)
+	Add(&head, 8)
+	Add(&head, 4)
+	Add(&head, 7)
+
+	node := PartitionList(&head, 5)
+
+	PrintLinkedList(&node)
+
+}
