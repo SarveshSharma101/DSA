@@ -21,7 +21,7 @@ func (s *Stack) IsEmpty() bool {
 }
 
 func (s *Stack) StackSize() int {
-	return s.Size
+	return s.Top + 1
 }
 
 func (s *Stack) StackTop() int {

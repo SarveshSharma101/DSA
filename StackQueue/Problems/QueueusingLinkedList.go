@@ -12,7 +12,7 @@ type LLQueue struct {
 func InitLLQueue(size int) *LLQueue {
 	return &LLQueue{
 		QueueHead: nil,
-		Front:     -1,
+		Front:     0,
 		Rear:      -1,
 		Size:      size,
 	}
@@ -23,7 +23,7 @@ func (q *LLQueue) IsLLQueueEmpty() bool {
 }
 
 func (q *LLQueue) LLQSize() int {
-	return (q.Rear + 1) - (q.Front + 1)
+	return (q.Rear + 1) - (q.Front)
 }
 
 func (q *LLQueue) LLQFront() int {

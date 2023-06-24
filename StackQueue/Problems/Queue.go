@@ -21,11 +21,14 @@ func (q *Queue) QIsFull() bool {
 }
 
 func (q *Queue) QSize() int {
-	return (q.Rear + 1) - (q.Front + 1)
+	if q.QIsEmpty() {
+		return 0
+	}
+	return (q.Rear + 1) - (q.Front)
 }
 
 func (q *Queue) QIsEmpty() bool {
-	return (q.Rear == q.Front)
+	return (q.Rear < q.Front) || (q.Rear == -1 && q.Front == -1)
 }
 
 func (q *Queue) QFront() int {
@@ -40,16 +43,23 @@ func (q *Queue) QPut(x int) {
 	if q.QIsFull() {
 		return
 	}
+	if q.QIsEmpty() {
+		q.Rear = 0
+		q.Front = 0
+		q.Q[q.Rear] = x
+		return
+	}
 	q.Rear = q.Rear + 1
 	q.Q[q.Rear] = x
+
 }
 
 func (q *Queue) QDelete() int {
 	if q.QIsEmpty() {
 		return -100
 	}
-	q.Front++
 	x := q.Q[q.Front]
 	q.Q[q.Front] = 0
+	q.Front++
 	return x
 }
