@@ -245,3 +245,21 @@ func TestSUQ(test *testing.T) {
 	stack.Display()
 	fmt.Println("--------------------------------------")
 }
+
+func TestBalancedBraces(t *testing.T) {
+	fmt.Println(IsBalancedParentheses("({})[]"))
+	fmt.Println(IsBalancedParentheses("{()})("))
+	fmt.Println(IsBalancedParentheses("{(})[]"))
+}
+
+func TestMinStack(test *testing.T) {
+	stack := InitMinStack(10)
+
+	stack.MinPush(1)
+	stack.MinPush(2)
+	stack.MinPush(-1)
+	fmt.Println("Min: ", stack.GetMin())
+	stack.Pop()
+	fmt.Println("Peek: ", stack.MinStackPeek())
+	fmt.Println("Min: ", stack.GetMin())
+}
