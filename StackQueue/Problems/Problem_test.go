@@ -263,3 +263,23 @@ func TestMinStack(test *testing.T) {
 	fmt.Println("Peek: ", stack.MinStackPeek())
 	fmt.Println("Min: ", stack.GetMin())
 }
+
+func TestEvalReversePolishNotation(test *testing.T) {
+	A := []string{"6", "3", "+", "5", "/"}
+	fmt.Println("--->", EvaluateReversePolishNotation(A))
+
+	A = []string{"6", "-3", "+", "5", "-"}
+	fmt.Println("--->", EvaluateReversePolishNotation(A))
+	A = []string{"6", "3", "2", "+", "*", "5", "/"}
+	fmt.Println("--->", EvaluateReversePolishNotation(A))
+}
+
+func TestSimplifiedPath(test *testing.T) {
+	fmt.Println("1. /home/ ", SimplifyDirectoryPath("/home/"))
+	fmt.Println("1. /../ ", SimplifyDirectoryPath("/../"))
+	fmt.Println("1. /a/./b/../../c/../d/  ", SimplifyDirectoryPath("/a/./b/../../c/../d/"))
+	fmt.Println("1. /a/./b/./c/./d/  ", SimplifyDirectoryPath("/a/./b/./c/./d/"))
+	fmt.Println("1. /../../../../../a  ", SimplifyDirectoryPath("/../../../../../a"))
+	fmt.Println("1.  /a/../.././../../.  ", SimplifyDirectoryPath("/a/../.././../../."))
+	fmt.Println("1. /a//b//c//////d  ", SimplifyDirectoryPath("/a//b//c//////d"))
+}

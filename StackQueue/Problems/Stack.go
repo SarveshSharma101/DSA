@@ -45,6 +45,7 @@ func (s *Stack) Pop() int {
 		return -100
 	}
 	x := s.S[s.Top]
+	s.S[s.Top] = 0
 	s.Top = s.Top - 1
 	return x
 }
