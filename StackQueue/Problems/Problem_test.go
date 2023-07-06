@@ -283,3 +283,10 @@ func TestSimplifiedPath(test *testing.T) {
 	fmt.Println("1.  /a/../.././../../.  ", SimplifyDirectoryPath("/a/../.././../../."))
 	fmt.Println("1. /a//b//c//////d  ", SimplifyDirectoryPath("/a//b//c//////d"))
 }
+
+func TestTrappingRainwater(test *testing.T) {
+	fmt.Println("Amt of water tarpped: ", TrappingRainWater(&[]int{1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}))
+	fmt.Println("Amt of water tarpped: ", TrappingRainWater(&[]int{1, 0, 0, 1, 0}))
+	fmt.Println("Amt of water tarpped: ", TrappingRainWater(&[]int{1, 0, 2, 0, 0, 1}))
+
+}

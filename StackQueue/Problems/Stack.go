@@ -28,6 +28,10 @@ func (s *Stack) StackTop() int {
 	return s.Top
 }
 
+func (s *Stack) StackPeek() int {
+	return s.S[s.Top]
+}
+
 func (s *Stack) IsFull() bool {
 	return s.Top == s.Size-1
 }
