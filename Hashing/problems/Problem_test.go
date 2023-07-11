@@ -1,0 +1,17 @@
+package problems
+
+import (
+	"fmt"
+	"testing"
+)
+
+func TestImplementCountingSort(t *testing.T) {
+	fmt.Println("1. 4 2 5 3 1:", ImplementCountingSort(&[]int{4, 2, 5, 3, 1}))
+	fmt.Println("2. 11 4 200:", ImplementCountingSort(&[]int{11, 4, 200}))
+}
+
+func TestIdenticalTwins(t *testing.T) {
+	fmt.Println("1. 1, 2, 3, 2, 1:", IdenticalTwins(&[]int{1, 2, 3, 2, 1}))
+	fmt.Println("2. 1, 2, 2, 3, 2, 1:", IdenticalTwins(&[]int{1, 2, 2, 3, 2, 1}))
+	fmt.Println("2. 1, 1, 1, 1:", IdenticalTwins(&[]int{1, 1, 1, 1}))
+}
