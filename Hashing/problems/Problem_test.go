@@ -15,3 +15,8 @@ func TestIdenticalTwins(t *testing.T) {
 	fmt.Println("2. 1, 2, 2, 3, 2, 1:", IdenticalTwins(&[]int{1, 2, 2, 3, 2, 1}))
 	fmt.Println("2. 1, 1, 1, 1:", IdenticalTwins(&[]int{1, 1, 1, 1}))
 }
+
+func TestLongestConsecutiveSequence(t *testing.T) {
+	fmt.Println("1. 24, 2, 34, 1, 3, 4:", LongestConsecutiveSequence(&[]int{24, 2, 34, 1, 3, 4}))
+
+}
