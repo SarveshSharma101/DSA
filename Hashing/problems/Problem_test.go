@@ -20,3 +20,9 @@ func TestLongestConsecutiveSequence(t *testing.T) {
 	fmt.Println("1. 24, 2, 34, 1, 3, 4:", LongestConsecutiveSequence(&[]int{24, 2, 34, 1, 3, 4}))
 
 }
+
+func TestLongestSubarrayWithZero(t *testing.T) {
+	fmt.Println("1. 3, 0, -1, -2, 3, 0, -2:")
+	LongestSubarraywithZeroSum(&[]int{3, 0, -1, -2, 3, 0, -2})
+
+}
