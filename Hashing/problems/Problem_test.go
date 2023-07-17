@@ -26,3 +26,10 @@ func TestLongestSubarrayWithZero(t *testing.T) {
 	LongestSubarraywithZeroSum(&[]int{3, 0, -1, -2, 3, 0, -2})
 
 }
+
+func TestLongestSubStringWithoutRepeat(t *testing.T) {
+
+	fmt.Println("workattech: ", LongestSubstringWithoutRepeat("workattech"))
+	fmt.Println("mississippi: ", LongestSubstringWithoutRepeat("mississippi"))
+
+}
