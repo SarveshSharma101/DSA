@@ -33,3 +33,10 @@ func TestLongestSubStringWithoutRepeat(t *testing.T) {
 	fmt.Println("mississippi: ", LongestSubstringWithoutRepeat("mississippi"))
 
 }
+
+func TestDistinctNumberinWindow(t *testing.T) {
+
+	fmt.Println("1, 1, 2, 1, 4, 6, 5 : ", DistinctNumbersinWindow(&[]int{1, 1, 2, 1, 4, 6, 5}, 3))
+	fmt.Println("1, 1, 1, 4 : ", DistinctNumbersinWindow(&[]int{1, 1, 1, 4}, 2))
+
+}
